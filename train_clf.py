@@ -21,10 +21,7 @@ if __name__ == "__main__":
 
     cust_data = pd.get_dummies(cust_data, 
                         columns=['Gender', 'Married', 'Dependents',
-                                 'Education', 'Self_Employed', 'Property_Area',
-                                 'online_security', 'online_backup', 'device_protection',
-                                 'tech_support', 'streaming_tv', 'streaming_movies',
-                                 'contract', 'paperless_billing', 'payment_method'], dtype = 'int64')
+                                 'Education', 'Self_Employed', 'Property_Area'], dtype = 'int64')
     cust_data['LoanAmount'] = cust_data['LoanAmount'].fillna(0)
     # Convert label to int and rename column
     cust_data['Loan_Status'] = cust_data['Loan_Status'].map({'Y': 1, 'N': 0})
