@@ -16,7 +16,7 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     np.random.seed(40)
     
-    load_approval_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cust_data_processed.csv")
+    load_approval_path = "cust_data_processed.csv" #os.path.join(os.path.dirname(os.path.abspath(__file__)), "cust_data_processed.csv")
     print("File to load", load_approval_path)
     cust_data = pd.read_csv(load_approval_path)
 
